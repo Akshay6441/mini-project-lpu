@@ -19,3 +19,13 @@ jobs:
       run: python app.py
     - name: Build Docker image
       run: docker build -t mini-project-lpu-1 .
+    # ...existing code...
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flask pytest ruff
+    - name: Lint with Ruff
+      run: ruff .
+    - name: Run tests
+      run: pytest
+# ...existing code...
