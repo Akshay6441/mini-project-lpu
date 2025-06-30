@@ -1,4 +1,3 @@
-# filepath: c:\Users\Lenovo\Desktop\mini-project-lpu-1\.github\workflows\python-app.yml
 name: Python application
 
 on: [push]
@@ -18,3 +17,5 @@ jobs:
         pip install flask
     - name: Run app
       run: python app.py
+    - name: Build Docker image
+      run: docker build -t mini-project-lpu-1 .
